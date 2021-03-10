@@ -1,65 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&display=swap");
+
 .nav {
-    position: relative;
-    display: flex;
-    list-style: none;
-    padding: 10px 20px;
+  position: relative;
+  display: flex;
+  list-style: none;
+  padding: 10px 20px;
 }    
 .nav a {
-      position: relative;
-      padding: 0.6em 2em;
-      font-size: 25px;
-      font-weight: bold;
-      border: none;
-      outline: none;
-      color: #000;
-      display: inline-block;
-      text-decoration: none;
-      z-index: 3;
-    }
-  
-    .active {
-      color: #EA178C;
-      bottom: 0px;
-      height: 100%;
-    }
-      
-    .active :after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 38%;
-      width: 40px;
-      height: 1px;
-      background-color: #EA178C;
-      animation: appear 2s;
-    }
-    
-  
-  
-   /*************** Presentation ********************/
-  @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&display=swap");
-  
-  @keyframes appear {
-    from { opacity: 0; width: 5px }
-    to   { opacity: 1; width: 40px }
+    position: relative;
+    padding: 0.6em 2em;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    z-index: 3;
   }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  html,
-  body {
+
+ .nav .active {
+    color: #EA178C;
+    bottom: 0px;
     height: 100%;
   }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F4F4F4;
-    font-family: Open Sans;
-    line-height: 1.5;
+    
+  .nav .active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 38%;
+    width: 40px;
+    height: 1px;
+    background-color: #EA178C ;
+    animation: appear 2s;
   }
-  
+
+/*************** Presentation ********************/
+
+@keyframes appear {
+  from { opacity: 0; width: 5px }
+  to   { opacity: 1; width: 40px }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4F4;
+  font-family: Open Sans;
+  line-height: 1.5;
+}

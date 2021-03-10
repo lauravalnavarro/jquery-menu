@@ -1,26 +1,26 @@
 var count=0;
-$('.nav').on('click','li', function() {
-    //Se agrega al elemento li un atributo id con un valor autoincrementable
-    $(this).attr("id",count++);
-    //Se toma el id anterior que tiene la clase active para removerla y asignarla al nuevo elemento.
-    idAnt=this.id-1
-    $('#'+idAnt).removeClass('active');
-    //Se cambia el elemento anterior a color negro.
-    $('#'+idAnt).children('a').css('color','#000');
-    //Se agrega la nuevo elemento seleccionado la clase 'active'
-    $(this).addClass('active');   
+$('a').on('click', function() {
+    //Se quita la clase active selected (la clase selected se crea con el fin de diferenciar cual es el elemento seleccionado) a todos los elemento 'a'
+    $('a').removeClass('active selected');
+    //a todos los elementos 'a' diferentes al seleccionado se les asigna el color negro
+    $('a').css({color:'#000'})
+    //Al elemento seleccionado se le asigna la clase active selected para identificar cual ha sido seleccionado
+    $(this).addClass('active selected'); 
+    //Al elemento seleccionado se le asigna el color #EA178C
+    $(this).css({color:'#EA178C'})
 });
 
-$('.nav li a').on('mouseover', function() {
-    $(this).css('color','#EA178C');    
-});
+$('a').on('mouseover',function() {
+    $(this).css({color:'#EA178C'});
+})
 
-$('.nav').on('mouseleave','li', function() {
-    //Valida que si la clase es diferente a 'active' se cambia a color negro
-    if($(this).attr('class') !='active') {
-        $(this).children('a').css('color','#000');
+$('a').on('mouseleave',function() {
+    //Valida que si la clase es diferente a 'selected' se cambia a color negro y se remueva la clase active
+    if($(this).hasClass('selected')===false) {
+        $(this).removeClass('active');
+        $(this).css({color:'#000'})
     }
-});
+})
 
 
 
