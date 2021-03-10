@@ -15,7 +15,7 @@ $('a').on('mouseover',function() {
 })
 
 $('a').on('mouseleave',function() {
-    //Valida que si la clase es diferente a 'selected' se cambia a color negro y se remueva la clase active
+    //Valida que si la clase es diferente a 'selected' se cambia a color negro y se quita la clase active
     if($(this).hasClass('selected')===false) {
         $(this).removeClass('active');
         $(this).css({color:'#000'})
