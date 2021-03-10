@@ -1,4 +1,3 @@
-var count=0;
 $('a').on('click', function() {
     //Se quita la clase active selected (la clase selected se crea con el fin de diferenciar cual es el elemento seleccionado) a todos los elemento 'a'
     $('a').removeClass('active selected');
